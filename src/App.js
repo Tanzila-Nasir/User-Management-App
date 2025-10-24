@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import UserCard from './UserCard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+
+      <main style={{ padding: '20px' }}>
+        <h2>Our Users</h2>
+        <div style={{ display: 'flex', gap: '10px' }}>
+          <UserCard name="Samrina Aziz" email="samreen321@gmail.com" role="Admin" />
+          <UserCard name="Tanzila Nasir" email="tanzila768@gmail.com" role="User" />
+          <UserCard name="Husna Qayyum" email="husna99@gmail.com" role="Moderator" />
+        </div>
+      </main>
+
+      <Footer />
     </div>
   );
 }
